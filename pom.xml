@@ -34,6 +34,11 @@
             <optional>true</optional>
         </dependency>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot</artifactId>
+            <type>jar</type>
+        </dependency>
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
@@ -48,6 +53,7 @@
             <artifactId>bootstrap</artifactId>
             <version>5.3.3</version>
         </dependency>
+
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>font-awesome</artifactId>
@@ -64,6 +70,7 @@
             <version>2.11.7</version>
         </dependency>
     </dependencies>
+    
     <build>
         <plugins>
             <plugin>
