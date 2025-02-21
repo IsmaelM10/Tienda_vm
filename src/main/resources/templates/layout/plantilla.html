@@ -16,7 +16,27 @@
         <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
         <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
         <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
-
+        <style>
+            body {
+                background-color: #121212;
+                color: #ffffff;
+            }
+            .navbar, .dropdown-menu {
+                background-color: #1e1e1e;
+            }
+            .navbar-brand, .nav-link, .dropdown-item {
+                color: #ffffff !important;
+            }
+            .dropdown-item:hover {
+                background-color: #333333;
+            }
+            #main-header {
+                background-color: #198754;
+            }
+            .bg-info {
+                background-color: #17a2b8 !important;
+            }
+        </style>
     </head>
     <body> 
         <header th:fragment="header" class="header">
@@ -101,6 +121,5 @@
         <footer th:fragment="footer" class="p-2 mt-5 bg-info text-white">
             <p class="text-center lead">&COPY; [[#{plantilla.derechos}]]</p>
         </footer>
-
     </body>
 </html>

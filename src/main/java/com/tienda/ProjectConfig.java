@@ -1,4 +1,5 @@
 package com.tienda;
+
 import java.util.List;
 import java.util.Locale;
 import org.springframework.context.annotation.Bean;
@@ -9,27 +10,43 @@ import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
+import org.thymeleaf.spring6.templateresolver.SpringResourceTemplateResolver;
+import org.thymeleaf.templatemode.TemplateMode;
+
 @Configuration
 
-public class ProjectConfig implements WebMvcConfigurer{
+public class ProjectConfig implements WebMvcConfigurer {
+
     @Bean
-    public LocaleResolver localeResolver(){
-        var slr= new SessionLocaleResolver();
+    public LocaleResolver localeResolver() {
+        var slr = new SessionLocaleResolver();
         slr.setDefaultLocale(Locale.getDefault());
         slr.setLocaleAttributeName("session.current.locale");
         slr.setTimeZoneAttributeName("session.current.timezone");
         return slr;
     }
-    
+
     @Bean
-    public LocaleChangeInterceptor localeChangerInterceptor(){
-        var lci= new LocaleChangeInterceptor();
+    public LocaleChangeInterceptor localeChangerInterceptor() {
+        var lci = new LocaleChangeInterceptor();
         lci.setParamName("lang");
         return lci;
     }
-    
+
     @Override
-    public void  addInterceptors(InterceptorRegistry registro){
+    public void addInterceptors(InterceptorRegistry registro) {
         registro.addInterceptor(localeChangerInterceptor());
+    }
+
+    /* El siguiente método se utilizar para publicar en la nube, independientemente  */
+    @Bean
+    public SpringResourceTemplateResolver templateResolver_0() {
+        SpringResourceTemplateResolver resolver = new SpringResourceTemplateResolver();
+        resolver.setPrefix("classpath:/templates");
+        resolver.setSuffix(".html");
+        resolver.setTemplateMode(TemplateMode.HTML);
+        resolver.setOrder(0);
+        resolver.setCheckExistence(true);
+        return resolver;
     }
 }
