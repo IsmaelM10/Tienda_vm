@@ -35,7 +35,7 @@ public class CategoriaService {
     @Transactional
     public void save(Categoria categoria) {
         //Si categoria.IdCategoria esta vacio... se inserta un registro
-        //si categoria.idCategoria tiene algo... se modifica ese registro
+        //Si categoria.idCategoria tiene algo... se modifica ese registro
         
         categoriaRepository.save(categoria);
     }
