@@ -129,9 +129,9 @@
                           enctype="multipart/form-data">
                         <input type="hidden" name="idCategoria" th:field="*{idCategoria}"/>
                         <input type="hidden" name="rutaImagen" th:field="*{rutaImagen}"/>
-                        <div class="row py-4 mb-4 bg-light">
+                        <div class="row py-4 mb-4" style="background-color: #2a2a2a; color: #ffffff;">
                             <div class="col-md-4 d-grid">
-                                <a th:href="@{/categoria/listado}" class="btn btn-primary">
+                                <a th:href="@{/categoria/listado}" class="btn btn-secondary">
                                     <i class="fas fa-arrow-left"></i> [[#{accion.regresar}]]
                                 </a>
                             </div>
@@ -148,8 +148,8 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="card">
-                                <div class="card-header">
+                            <div class="card" style="background-color: #1e1e1e; color: #ffffff; border: 1px solid #444;">
+                                <div class="card-header" style="background-color: #333; color: #ffffff;">
                                     <h4>[[#{accion.actualizar}]]</h4>
                                 </div>
                                 <div class="card-body">
@@ -157,7 +157,7 @@
                                         <label for="descripcion">[[#{categoria.descripcion}]]</label>
                                         <input type="text" class="form-control" 
                                                name="descripcion" th:field="*{descripcion}"
-                                               required="true"/>
+                                               required="true" style="background-color: #2a2a2a; color: #ffffff; border: 1px solid #555;"/>
                                     </div>
                                     <div class="mb-3">
                                         <label for="activo">[[#{categoria.activo}]]</label>
@@ -170,8 +170,8 @@
                                     <div class="mb-3">
                                         <label for="imagen">[[#{categoria.rutaImagen}]]</label>
                                         <input class="form-control" type="file" name="imagenFile"
-                                               onchange="readURL(this);" />
-                                        <img id="blah" th:src="@{${categoria.rutaImagen}}" alt="your image" height="200"/>
+                                               onchange="readURL(this);" style="background-color: #2a2a2a; color: #ffffff; border: 1px solid #555;"/>
+                                        <img id="blah" th:src="@{${categoria.rutaImagen}}" alt="your image" height="200" style="border: 1px solid #555;"/>
                                     </div>
                                 </div>
                             </div>
