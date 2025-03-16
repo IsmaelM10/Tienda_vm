@@ -36,7 +36,22 @@ public class ProductoService {
     public void save(Producto producto) {
         //Si producto.IdProducto esta vacio... se inserta un registro
         //Si producto.idProducto tiene algo... se modifica ese registro
-        
+
         productoRepository.save(producto);
+    }
+
+    @Transactional(readOnly = true)
+    public List<Producto> consultaAmpliada(double precioInf, double precioSup) {
+        return productoRepository.findByPrecioBetweenOrderByPrecio(precioInf, precioSup);
+    }
+
+    @Transactional(readOnly = true)
+    public List<Producto> consultaJPQL(double precioInf, double precioSup) {
+        return productoRepository.consultaJPQL(precioInf, precioSup);
+    }
+
+    @Transactional(readOnly = true)
+    public List<Producto> consultaSQL(double precioInf, double precioSup) {
+        return productoRepository.consultaSQL(precioInf, precioSup);
     }
 }

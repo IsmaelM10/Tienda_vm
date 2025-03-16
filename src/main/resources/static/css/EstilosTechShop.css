@@ -1,0 +1,180 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Botón de agregar */
+.btn-agregar {
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
+
+/* Estilos para la ventana modal */
+.modal-content {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border: 1px solid #444;
+}
+
+.modal-header {
+    background-color: #333;
+    color: #ffffff;
+    border-bottom: 1px solid #555;
+}
+
+.btn-close {
+    filter: invert(1);
+}
+
+/* Campos de formulario */
+.form-control, .form-select {
+    background-color: #444;
+    color: #ffffff;
+    border: 1px solid #666;
+}
+
+/* Pie de modal */
+.modal-footer {
+    background-color: #333;
+    border-top: 1px solid #555;
+}
+
+/* Tarjeta resumen */
+.card-custom {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border: 1px solid #555;
+
+    .navbar, .dropdown-menu {
+        background-color: #1e1e1e;
+    }
+    .navbar-brand, .nav-link, .dropdown-item {
+        color: #ffffff !important;
+    }
+    .dropdown-item:hover {
+        background-color: #333333;
+    }
+    #main-header {
+        background-color: #198754;
+    }
+    .bg-info {
+        background-color: #17a2b8 !important;
+    }
+    .section {
+        background-color: #121212;
+        color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .card-body ul li {
+        color: #ffffff !important;
+    }
+    .card {
+        background-color: #2a2a2a !important;
+        color: #ffffff !important;
+        border: 1px solid #444 !important;
+    }
+    .card-header {
+        background-color: #333 !important;
+        color: #ffffff !important;
+        border-bottom: 1px solid #555 !important;
+    }
+    .table {
+        background-color: #1e1e1e !important;
+        color: #ffffff !important;
+        border: 1px solid #444 !important;
+    }
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: #2a2a2a !important;
+    }
+    .table-striped tbody tr:nth-of-type(even) {
+        background-color: #1e1e1e !important;
+    }
+    .table th, .table td {
+        border-color: #444 !important;
+        background-color: #2a2a2a !important;
+        color: #ffffff !important;
+    }
+    .bg-primary {
+        background-color: #007bff !important;
+        color: #ffffff !important;
+    }
+
+    .bg-info {
+        background-color: #17a2b8 !important;
+        color: #ffffff !important;
+    }
+
+    .bg-warning {
+        background-color: #ffc107 !important;
+        color: #000000 !important;
+    }
+
+    .btn-primary {
+        background-color: #007bff !important;
+        border-color: #0056b3 !important;
+    }
+
+    .btn-info {
+        background-color: #17a2b8 !important;
+        border-color: #117a8b !important;
+    }
+
+    .btn-warning {
+        background-color: #ffc107 !important;
+        border-color: #d39e00 !important;
+        color: #000 !important;
+    }
+
+    /* Sección de botones */
+    .custom-section {
+        background-color: #2a2a2a;
+        color: #ffffff;
+    }
+
+    /* Modal */
+    .custom-modal {
+        background-color: #2a2a2a;
+        color: #ffffff;
+        border: 1px solid #444;
+    }
+
+    .custom-modal-header {
+        background-color: #333;
+        color: #ffffff;
+        border-bottom: 1px solid #555;
+    }
+
+    .custom-modal-footer {
+        background-color: #333;
+        border-top: 1px solid #555;
+    }
+
+    /* Inputs */
+    .custom-input {
+        background-color: #444;
+        color: #ffffff;
+        border: 1px solid #666;
+    }
+
+    .custom-img {
+        border: 1px solid #666;
+    }
+
+    .btn-close {
+        filter: invert(1);
+    }
+
+    /* Tarjetas */
+    .custom-card {
+        background-color: #1e1e1e;
+        color: #ffffff;
+        border: 1px solid #444;
+    }
+
+    .custom-card-header {
+        background-color: #333;
+        color: #ffffff;
+    }
+
+}
