@@ -16,7 +16,14 @@ flush privileges;
 use techshop;
 
 /* la tabla de categoria contiene categorias de productos*/
- 
+create table categoria (
+  id_categoria INT NOT NULL AUTO_INCREMENT,
+  descripcion VARCHAR(30) NOT NULL,
+  ruta_imagen varchar(1024),
+  activo bool,
+  PRIMARY KEY (id_categoria))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4;
 
 create table producto (
   id_producto INT NOT NULL AUTO_INCREMENT,
