@@ -16,7 +16,9 @@ public class ProductoService {
     @Transactional(readOnly = true)
     public List<Producto> getProductos(boolean activos) {
         var lista = productoRepository.findAll();
-        //Falta algo xd
+        if (activos){
+            lista.removeIf(e -> !e.isActivo());
+        }
         return lista;
     }
 
